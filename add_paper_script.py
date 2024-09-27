@@ -18,9 +18,9 @@ if __name__ == '__main__':
     [0] 3D Detection & Segmentation;
     [1] Shape Representation;
     [2] Shape & Scene Completion;
-    [3] Shape Reconstruction;
+    [3] Shape Reconstruction & Generation;
     [4] 3D Scene Understanding;
-    [5] 3D Scene Reconstruction;
+    [5] 3D Scene Reconstruction & Generation;
     [6] NeRF;
     [7] About Human Body;
     [8] General Methods;
@@ -81,7 +81,8 @@ if __name__ == '__main__':
     markdown_line += '\n'
 
     '''Insert to README.md'''
-    paper_list = open('./README.md').read()
+    with open('./README.md', 'r') as file:
+        paper_list = file.read()
 
     # check if already existed
     if paper_title.strip() in paper_list:
